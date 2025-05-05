@@ -1,0 +1,97 @@
+2025-04-02 11:28:28,352 - __main__ - ERROR - Ä£ÐÍ¼ÓÔØÊ§°Ü: [ONNXRuntimeError] : 3 : NO_SUCHFILE : Load model from model/dongyumi.xpynp failed:Load model model/dongyumi.xpynp failed. File doesn't exist
+2025-04-02 11:29:51,475 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.120.81.168:5000
+2025-04-02 11:29:51,475 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-02 17:11:01,718 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.120.81.168:5000
+2025-04-02 17:11:01,718 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-02 17:18:21,618 - __main__ - INFO - Model loaded successfully
+2025-04-02 17:18:21,637 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.120.81.168:5000
+2025-04-02 17:18:21,637 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-02 18:34:09,913 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: 7FsdF9ImEyNt9fdb8763c717f79beaebf0aa62ce7df7.jpg, Ô¤²â½á¹û: ´ó°ß²¡
+2025-04-02 18:34:09,919 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 18:34:09] "POST /predict HTTP/1.1" 200 -
+2025-04-02 18:34:25,261 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: meXwAxj0yE3E7414c74ba48b266e91216158701719ab.jpg, Ô¤²â½á¹û: ÄÏ·½Ðâ²¡
+2025-04-02 18:34:25,263 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 18:34:25] "POST /predict HTTP/1.1" 200 -
+2025-04-02 18:35:23,001 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: FlNOovj4CrU78434ae91ff8c011463c9c8cbef8bfd28.jpg, Ô¤²â½á¹û: ½¡¿µÒ¶Æ¬
+2025-04-02 18:35:23,013 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 18:35:23] "POST /predict HTTP/1.1" 200 -
+2025-04-02 18:35:37,597 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: V8mEyLmUzrIee58e3a03b18e042c6f4c994444b48089.jpg, Ô¤²â½á¹û: ´ó°ß²¡
+2025-04-02 18:35:37,599 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 18:35:37] "POST /predict HTTP/1.1" 200 -
+2025-04-02 18:41:41,454 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: LjvlZYs7OI9p42221bbd32c033ec364924b7191cc6b3.JPG, Ô¤²â½á¹û: ´ó°ß²¡
+2025-04-02 18:41:41,454 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 18:41:41] "POST /predict HTTP/1.1" 200 -
+2025-04-02 18:41:46,168 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: Z0r89oHYz75ff20af28ee0bfa292b98a94e3da660927.JPG, Ô¤²â½á¹û: ½¡¿µÒ¶Æ¬
+2025-04-02 18:41:46,169 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 18:41:46] "POST /predict HTTP/1.1" 200 -
+2025-04-02 18:57:55,627 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: 5RggSpZXTaQw42221bbd32c033ec364924b7191cc6b3.JPG, Ô¤²â½á¹û: ½¡¿µÒ¶Æ¬
+2025-04-02 18:57:55,628 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 18:57:55] "POST /predict HTTP/1.1" 200 -
+2025-04-02 19:50:18,726 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: 8XPuxVPiRGGs536b720bfd7edcfa75c1ae87cb5aa8a0.JPG, Ô¤²â½á¹û: ´ó°ß²¡
+2025-04-02 19:50:18,727 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 19:50:18] "POST /predict HTTP/1.1" 200 -
+2025-04-02 19:50:30,094 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: 3DjYeOKQMpha7414c74ba48b266e91216158701719ab.jpg, Ô¤²â½á¹û: ÄÏ·½Ðâ²¡
+2025-04-02 19:50:30,097 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 19:50:30] "POST /predict HTTP/1.1" 200 -
+2025-04-02 19:50:47,561 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: E25Q0RPdqDf6a1f2c40b3e036d263e4cd347ad8deed7.jpg, Ô¤²â½á¹û: ±±·½Ò¶°ß²¡
+2025-04-02 19:50:47,562 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 19:50:47] "POST /predict HTTP/1.1" 200 -
+2025-04-02 19:50:56,736 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: HD2RxbBpxX3h8d4f4dc3642ebc712126997ee1bfab92.jpg, Ô¤²â½á¹û: ±±·½Ò¶°ß²¡
+2025-04-02 19:50:56,738 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 19:50:56] "POST /predict HTTP/1.1" 200 -
+2025-04-02 19:51:09,794 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: c2uudd3oHnS49fdb8763c717f79beaebf0aa62ce7df7.jpg, Ô¤²â½á¹û: ±±·½Ò¶°ß²¡
+2025-04-02 19:51:09,796 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 19:51:09] "POST /predict HTTP/1.1" 200 -
+2025-04-02 19:51:37,536 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: g6E5zfkaQZnL9fdb8763c717f79beaebf0aa62ce7df7.jpg, Ô¤²â½á¹û: ±±·½Ò¶°ß²¡
+2025-04-02 19:51:37,539 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 19:51:37] "POST /predict HTTP/1.1" 200 -
+2025-04-02 19:52:02,690 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: fiI09Fy7pPhy5a55237dc966d5fd395f9f1f32a12825.jpg, Ô¤²â½á¹û: ±±·½Ò¶°ß²¡
+2025-04-02 19:52:02,694 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 19:52:02] "POST /predict HTTP/1.1" 200 -
+2025-04-02 19:57:37,571 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: bqv1VUjMAhuA2c0769eb6fa144f4dd3cdb9f373fe68f.jpg, Ô¤²â½á¹û: ±±·½Ò¶°ß²¡
+2025-04-02 19:57:37,573 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 19:57:37] "POST /predict HTTP/1.1" 200 -
+2025-04-02 19:57:57,942 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: G6pALfp6GLm942221bbd32c033ec364924b7191cc6b3.JPG, Ô¤²â½á¹û: ÄÏ·½Ðâ²¡
+2025-04-02 19:57:57,943 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 19:57:57] "POST /predict HTTP/1.1" 200 -
+2025-04-02 20:03:00,909 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: kaHXSPjsiRqLa0064bb96ed9a5609cab485b4e73f35a.jpg, Ô¤²â½á¹û: ±±·½Ò¶°ß²¡
+2025-04-02 20:03:00,912 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 20:03:00] "POST /predict HTTP/1.1" 200 -
+2025-04-02 20:09:38,967 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: ri9N7PbKCcSbba7d726fb09168dab8240eec05ff5bbc.jpg, Ô¤²â½á¹û: ½¡¿µÒ¶Æ¬
+2025-04-02 20:09:38,970 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 20:09:38] "POST /predict HTTP/1.1" 200 -
+2025-04-02 20:09:45,948 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: Wb7J608MfMF6ab2a9d2f6a8d497ce6cfe3c8ad43dfd7.jpg, Ô¤²â½á¹û: ´ó°ß²¡
+2025-04-02 20:09:45,950 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 20:09:45] "POST /predict HTTP/1.1" 200 -
+2025-04-02 20:09:57,262 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: kxo4BBGBW3Nif20af28ee0bfa292b98a94e3da660927.JPG, Ô¤²â½á¹û: ½¡¿µÒ¶Æ¬
+2025-04-02 20:09:57,263 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 20:09:57] "POST /predict HTTP/1.1" 200 -
+2025-04-02 20:10:06,996 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: f9123gGFCkxKf0489b4e70ab8b029e045325a7a7acee.JPG, Ô¤²â½á¹û: ´ó°ß²¡
+2025-04-02 20:10:06,997 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 20:10:06] "POST /predict HTTP/1.1" 200 -
+2025-04-02 20:10:14,369 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: QbI8hAVDUUUg353f67099edc0a8c9ae887ac136a7fde.JPG, Ô¤²â½á¹û: ±±·½Ò¶°ß²¡
+2025-04-02 20:10:14,369 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 20:10:14] "POST /predict HTTP/1.1" 200 -
+2025-04-02 20:17:01,479 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: n9RLQWWxJdVMf20af28ee0bfa292b98a94e3da660927.JPG, Ô¤²â½á¹û: ´ó°ß²¡
+2025-04-02 20:17:01,480 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 20:17:01] "POST /predict HTTP/1.1" 200 -
+2025-04-02 20:17:11,773 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: OYobzV0BnoZ42cb6ab3da2d0d8ff156f9f927f5bcabe.jpg, Ô¤²â½á¹û: ½¡¿µÒ¶Æ¬
+2025-04-02 20:17:11,775 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 20:17:11] "POST /predict HTTP/1.1" 200 -
+2025-04-02 20:17:58,218 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: PRYXTEqRCHwD5f4a763fec8d41b12ab2450058412055.jpg, Ô¤²â½á¹û: ½¡¿µÒ¶Æ¬
+2025-04-02 20:17:58,220 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 20:17:58] "POST /predict HTTP/1.1" 200 -
+2025-04-02 20:18:09,480 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: MrniubdoDqLXc6e2062edb20950a6142b5dafdb7a57f.jpg, Ô¤²â½á¹û: ´ó°ß²¡
+2025-04-02 20:18:09,483 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 20:18:09] "POST /predict HTTP/1.1" 200 -
+2025-04-02 20:18:15,934 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: 53LsMlP71USS5a55237dc966d5fd395f9f1f32a12825.jpg, Ô¤²â½á¹û: ´ó°ß²¡
+2025-04-02 20:18:15,936 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 20:18:15] "POST /predict HTTP/1.1" 200 -
+2025-04-02 20:21:39,614 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: rr76HH10IGWR9fdb8763c717f79beaebf0aa62ce7df7.jpg, Ô¤²â½á¹û: ±±·½Ò¶°ß²¡
+2025-04-02 20:21:39,619 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 20:21:39] "POST /predict HTTP/1.1" 200 -
+2025-04-02 20:22:07,210 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: 8KHZbTcmsfjJ2c0769eb6fa144f4dd3cdb9f373fe68f.jpg, Ô¤²â½á¹û: ±±·½Ò¶°ß²¡
+2025-04-02 20:22:07,214 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 20:22:07] "POST /predict HTTP/1.1" 200 -
+2025-04-02 20:36:04,055 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: SQmh7xSY4kQw5a55237dc966d5fd395f9f1f32a12825.jpg, Ô¤²â½á¹û: ´ó°ß²¡
+2025-04-02 20:36:04,057 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 20:36:04] "POST /predict HTTP/1.1" 200 -
+2025-04-02 21:01:49,742 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: yFTkDsLCI5cI19bc4673842771cca0786efa4f09035f.jpg, Ô¤²â½á¹û: ½¡¿µÒ¶Æ¬
+2025-04-02 21:01:49,747 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 21:01:49] "POST /predict HTTP/1.1" 200 -
+2025-04-02 21:01:56,707 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: JBozjL8Q92Hw2c0769eb6fa144f4dd3cdb9f373fe68f.jpg, Ô¤²â½á¹û: ±±·½Ò¶°ß²¡
+2025-04-02 21:01:56,710 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 21:01:56] "POST /predict HTTP/1.1" 200 -
+2025-04-02 21:02:05,119 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: SFqNo2dnVwN510c585906b90d5c6f24bf7587948c6c1.jpg, Ô¤²â½á¹û: ½¡¿µÒ¶Æ¬
+2025-04-02 21:02:05,121 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 21:02:05] "POST /predict HTTP/1.1" 200 -
+2025-04-02 21:02:19,684 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: PTmZdyZdwoNN1044b0f93d7333f2e05c4488cc8520ad.JPG, Ô¤²â½á¹û: ´ó°ß²¡
+2025-04-02 21:02:19,684 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 21:02:19] "POST /predict HTTP/1.1" 200 -
+2025-04-02 21:02:24,859 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: GrSC6NSQ3Gnjf20af28ee0bfa292b98a94e3da660927.JPG, Ô¤²â½á¹û: ½¡¿µÒ¶Æ¬
+2025-04-02 21:02:24,860 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 21:02:24] "POST /predict HTTP/1.1" 200 -
+2025-04-02 21:02:31,547 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: 34hWu7oS28sT42221bbd32c033ec364924b7191cc6b3.JPG, Ô¤²â½á¹û: ÄÏ·½Ðâ²¡
+2025-04-02 21:02:31,547 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 21:02:31] "POST /predict HTTP/1.1" 200 -
+2025-04-02 21:02:39,231 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: DZ1LjzPz1AKh773a00f6eee979769b4fdd36e5223b65.JPG, Ô¤²â½á¹û: ½¡¿µÒ¶Æ¬
+2025-04-02 21:02:39,231 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 21:02:39] "POST /predict HTTP/1.1" 200 -
+2025-04-02 21:02:46,541 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: reXy5pMfTPXbac6739bda4309212a0ec6015368ee5c5.JPG, Ô¤²â½á¹û: ÄÏ·½Ðâ²¡
+2025-04-02 21:02:46,541 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 21:02:46] "POST /predict HTTP/1.1" 200 -
+2025-04-02 21:02:59,028 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: gQT9S19dGefY9913f1987579d8ecab1a1e6afce17b5d.jpg, Ô¤²â½á¹û: ½¡¿µÒ¶Æ¬
+2025-04-02 21:02:59,030 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 21:02:59] "POST /predict HTTP/1.1" 200 -
+2025-04-02 21:03:10,984 - __main__ - INFO - ³É¹¦´¦ÀíÍ¼Ïñ: e7vnBcgRLOTb71bd7c3724b41f5be36e8946f4d2ed82.jpg, Ô¤²â½á¹û: ´ó°ß²¡
+2025-04-02 21:03:10,985 - werkzeug - INFO - 127.0.0.1 - - [02/Apr/2025 21:03:10] "POST /predict HTTP/1.1" 200 -

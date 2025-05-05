@@ -1,0 +1,87 @@
+<!-- index.wxml -->
+<view class="container">
+  <!-- 顶部标题栏 -->
+  <view class="header">
+    <view class="title">玉贝未来</view>
+    <view class="subtitle">玉米长势好不好，玉贝未来都知道。</view>
+    <view class="subtitle">快速识别玉米病害、虫害及缺素等。</view>
+  </view>
+
+  <!-- 机器人图标 -->
+  <image class="robot-icon" src="/assets/robot.png" mode="aspectFit"></image>
+
+  <!-- 扫描框 -->
+  <view class="scan-box">
+    <view class="scan-inner"></view>
+  </view>
+
+  <!-- 上传按钮 -->
+  <button class="upload-btn" bindtap="takePhoto">拍照上传</button>
+  <view class="album-text" bindtap="chooseImage">从相册中上传</view>
+
+  <!-- 拍照指南 -->
+  <view class="guide-container">
+    <view class="guide-title">拍照指南</view>
+    <view class="more-guide">更多指南></view>
+  </view>
+
+  <!-- 图片预览 -->
+  <view class="preview-container" wx:if="{{imgSrc}}">
+    <image class="preview-image" src="{{imgSrc}}" mode="aspectFit"></image>
+    <view class="preview-actions">
+      <button class="action-btn retake" bindtap="chooseImage">重新拍照</button>
+      <button class="action-btn analyze" bindtap="analyzeImage">开始识别</button>
+    </view>
+  </view>
+
+  <!-- 错误提示 -->
+  <view class="error-container" wx:if="{{error}}">
+    <view class="error-message">{{error}}</view>
+    <view class="error-close" bindtap="clearError">×</view>
+  </view>
+
+  <!-- 识别结果 -->
+  <view class="result-container" wx:if="{{result}}">
+    <view class="result-header">
+      <view class="result-title">识别结果 <text class="result-count">(仅供参考) #1个</text></view>
+      <view class="result-action">识别错误反馈</view>
+    </view>
+    
+    <view class="disease-item">
+      <view class="disease-icon">1</view>
+      <view class="disease-name">{{result.predicted_class}}</view>
+      <view class="disease-confidence">相似度 {{result.confidenceText}}</view>
+      <view class="disease-arrow">></view>
+    </view>
+  </view>
+
+  <!-- 历史记录 -->
+  <block wx:if="{{!result && history.length > 0}}">
+    <view class="history-container">
+      <view class="history-title">历史记录</view>
+      <view class="history-list">
+        <view wx:for="{{history}}" wx:key="time" 
+          class="history-item {{index === history.length-1 ? 'history-item-last' : ''}}" 
+          bindtap="viewHistory" 
+          data-index="{{index}}">
+          <image class="history-image" src="{{item.imagePath}}" mode="aspectFill"></image>
+          <view class="history-info">
+            <view class="history-disease">{{item.disease}}</view>
+            <view class="history-time">{{item.time}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <!-- 空历史记录提示 -->
+  <view wx:if="{{!result && history.length === 0 && !imgSrc}}" class="empty-history">
+    <text>暂无历史记录</text>
+  </view>
+
+  <!-- 加载中 -->
+  <view class="loading-container" wx:if="{{isAnalyzing}}">
+    <view class="loading-spinner"></view>
+    <text class="loading-text">正在诊断中...</text>
+  </view>
+</view>
