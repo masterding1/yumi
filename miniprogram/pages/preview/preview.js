@@ -1,3 +1,4 @@
+// preview.js
 Page({
   data: {
     imgSrc: ''
@@ -70,4 +71,4 @@ Page({
   goBack: function() {
     wx.navigateBack();
   }
-});
+})

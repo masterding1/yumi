@@ -1,20 +1,23 @@
 <view class="container">
   <!-- 顶部背景和标题区域 -->
   <view class="header-section">
-    <image class="logo-atom" src="/images/atom-logo.png" mode="aspectFit"></image> <!-- 假设的原子logo路径 -->
-    <view class="title-container">
-      <text class="main-title">玉见未来</text>
-      <image class="leaf-icon" src="/images/leaf.png" mode="widthFix"></image> <!-- 假设的叶子图标路径 -->
+    <text class="main-title">玉见未来</text>
+    <view class="subtitle-container">
+      <text class="subtitle">玉米长势好不好，玉见未来都知道。</text>
+      <text class="subtitle-detail">快速识别玉米病害、虫害及缺素等。</text>
     </view>
-    <text class="subtitle">玉米长势好不好，玉见未来都知道。</text>
-    <text class="subtitle-detail">快速识别玉米病害、虫害及缺素等。</text>
-    <image class="robot-image" src="/images/robot.png" mode="aspectFit"></image> <!-- 假设的机器人图片路径 -->
+    <image class="robot-image" src="../images/robot.png" mode="aspectFit" bindtap="navigateToWebview" style="width: 360rpx; height: 360rpx; position: absolute; left: 350rpx; top: 50rpx; animation: float 3s ease-in-out infinite;"></image>
+    
+    <!-- 消息logo -->
+    <view style="position: absolute; left: 553rpx; top: 115rpx; background-color: #ffffff; border-radius: 18rpx; padding: 10rpx 22rpx; box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.1); z-index: 10; animation: float 3s ease-in-out infinite; display: flex; align-items: center; justify-content: center;">
+      <text style="font-size: 24rpx; color: #4A90E2; font-weight: bold;">点点我!</text>
+    </view>
   </view>
 
   <!-- 上传操作区域 -->
   <view class="upload-section">
-    <view class="scan-icon-container">
-      <image class="scan-cube-icon" src="/images/scan-cube.png" mode="aspectFit"></image> <!-- 假设的扫描方块图标 -->
+    <view class="scan-icon-container" style="display: flex; justify-content: center; width: 100%;">
+      <image class="scan-cube-icon" src="../images/scan-cube.png" mode="aspectFit" style="width: 300rpx; height: 300rpx; margin-top: 100rpx;"></image>
     </view>
     <button class="upload-button camera-button" bindtap="chooseImage" data-sourcetype="camera">拍照上传</button>
     <text class="upload-link album-link" bindtap="chooseImage" data-sourcetype="album">从相册中上传</text>
@@ -25,7 +28,4 @@
     <text class="guide-text left-guide">拍照指南</text>
     <text class="guide-text right-guide">更多指南 ></text>
   </view>
-
-  <!-- 蓝心小V悬浮图标 (如果需要) -->
-  <!-- <image class="floating-icon" src="/images/blue-v.png" mode="aspectFit"></image> -->
 </view>

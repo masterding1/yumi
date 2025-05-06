@@ -123,40 +123,11 @@
   padding: 40rpx 0;
 }
 
-.detailed-info-section {
+.suggestion-section {
   margin-top: 30rpx;
   padding: 20rpx;
-  background-color: #f9f9f9; /* 与原 suggestion-section 类似 */
+  background-color: #f9f9f9;
   border-radius: 10rpx;
-}
-
-.info-block {
-  margin-bottom: 20rpx;
-}
-
-.info-block:last-child {
-  margin-bottom: 0;
-}
-
-.info-title {
-  font-size: 28rpx;
-  font-weight: bold;
-  color: #333;
-  display: block;
-  margin-bottom: 8rpx;
-}
-
-.info-text {
-  font-size: 26rpx;
-  color: #555;
-  line-height: 1.6;
-  white-space: pre-wrap; /* 保留文本中的换行符 */
-}
-
-.location-time-info .info-text { /* 特定为地点时间信息调整样式，如果需要 */
-  font-size: 24rpx;
-  color: #777;
-  margin-top: 15rpx;
 }
 
 .suggestion-title {

@@ -2,10 +2,10 @@
   <view class="image-preview-section">
     <image src="{{imgSrc}}" class="result-image-preview" mode="aspectFill"></image>
     <view class="image-overlay-info">
-      <text class="date-time-info">{{displayTime}}</text>
+      <text class="date-time-info">{{displayTime}}</text> <!-- 假设的时间信息 -->
     </view>
     <view class="back-button" bindtap="goBack">
-      <image src="/images/back-arrow.png" mode="aspectFit"></image> <!-- 假设的返回箭头图标路径 -->
+      <image src="/images/back-arrow.png" mode="aspectFit"></image> <!-- 返回箭头图标 -->
     </view>
   </view>
 
@@ -21,35 +21,16 @@
         <text class="disease-name">{{disease}}</text>
         <text class="confidence-text">相似度 <text class="confidence-value">{{confidence}}%</text></text>
       </view>
-      <image class="arrow-icon" src="/images/right-arrow.png" mode="aspectFit"></image> <!-- 假设的右箭头图标路径 -->
+      <image class="arrow-icon" src="/images/right-arrow.png" mode="aspectFit"></image> <!-- 右箭头图标 -->
     </view>
     <view wx:else class="no-result">
       <text>未能获取识别结果</text>
     </view>
 
-    <!-- 新的详细信息展示区域 -->
-    <view class="detailed-info-section">
-      <view class="info-block" wx:if="{{symptoms}}">
-        <text class="info-title">症状：</text>
-        <text class="info-text">{{symptoms}}</text>
-      </view>
-      <view class="info-block" wx:if="{{cause}}">
-        <text class="info-title">病因：</text>
-        <text class="info-text">{{cause}}</text>
-      </view>
-      <view class="info-block" wx:if="{{harm}}">
-        <text class="info-title">危害：</text>
-        <text class="info-text">{{harm}}</text>
-      </view>
-      <view class="info-block" wx:if="{{prevention_advice}}">
-        <text class="info-title">防治建议：</text>
-        <text class="info-text">{{prevention_advice}}</text>
-      </view>
-      <view class="info-block location-time-info">
-        <text class="info-text">当前地点：{{location_info}}，时间：{{time_info}}</text>
-      </view>
+    <view class="suggestion-section" wx:if="{{suggestion}}">
+      <text class="suggestion-title">处理建议：</text>
+      <text class="suggestion-text">{{suggestion}}</text>
     </view>
-
   </view>
   
   <button class="home-button" bindtap="goHome">返回首页</button>

@@ -7,6 +7,8 @@ import io
 import base64
 import time
 import os
+import torch
+from scipy.special import expit
 
 app = Flask(__name__)
 CORS(app)  # 启用跨域支持
@@ -28,20 +30,32 @@ def preprocess_image(image, target_size=(224, 224)):
     # 调整大小
     image = image.resize(target_size)
     # 转换为numpy数组
-    img_array = np.array(image).astype(np.float32)
+    img_array = np.array(image)  # 保留原始数据类型
     # 转换为RGB（如果是RGBA）
     if img_array.shape[2] == 4:
         img_array = img_array[:, :, :3]
     # 归一化
     img_array = img_array / 255.0
     # 标准化
-    mean = np.array([0.485, 0.456, 0.406], dtype=np.float32).reshape((1, 1, 3))
-    std = np.array([0.229, 0.224, 0.225], dtype=np.float32).reshape((1, 1, 3))
+    mean = np.array([0.485, 0.456, 0.406]).reshape((1, 1, 3))
+    std = np.array([0.229, 0.224, 0.225]).reshape((1, 1, 3))
     img_array = (img_array - mean) / std
     # 转换为NCHW格式
     img_array = img_array.transpose(2, 0, 1)
     img_array = img_array.reshape(1, 3, target_size[0], target_size[1])
-    return img_array
+    
+    # 转换为张量并移动到设备
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    tensor_data = torch.tensor(img_array).to(device)
+    
+    # 检查数据类型并转换为float32
+    if tensor_data.dtype != torch.float32:
+        tensor_data = tensor_data.to(torch.float32)
+    
+    # 将张量转换为NumPy数组
+    numpy_data = tensor_data.cpu().numpy()
+    
+    return numpy_data
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -77,7 +91,9 @@ def predict():
             return jsonify({"success": False, "error": f"无法打开图像: {str(e)}"})
     
     # 获取其他参数
-    time_info = request.form.get('time', '未知') if request.form else request.json.get('time', '未知') if request.is_json else '未知'
+    # 获取其他参数
+    current_time = time.strftime("%Y/%m/%d %H:%M:%S", time.localtime())
+    time_info = request.form.get('time', current_time) if request.form else request.json.get('time', current_time) if request.is_json else current_time
     location = request.form.get('location', '未知') if request.form else request.json.get('location', '未知') if request.is_json else '未知'
     growth_stage = request.form.get('growth_stage', '未知') if request.form else request.json.get('growth_stage', '未知') if request.is_json else '未知'
     
@@ -98,34 +114,34 @@ def predict():
         output = session.run(None, {input_name: input_data})
         
         # 处理结果
-        probabilities = output[0][0]
+        raw_probabilities = output[0][0]
+        probabilities = expit(raw_probabilities)  # 应用Sigmoid函数
         predicted_class_idx = np.argmax(probabilities)
         confidence = float(probabilities[predicted_class_idx])
         disease = CLASS_NAMES[predicted_class_idx]
         inference_time = time.time() - start_time
         
         # 生成建议
-        suggestion = f"检测到{disease}。建议：\n"
-        if growth_stage == "苗期":
-            if disease == "叶斑病":
-                suggestion += "苗期叶斑病建议使用多菌灵等杀菌剂喷洒，保持田间通风。"
-            elif disease == "叶锈病":
-                suggestion += "苗期叶锈病建议清除病叶，使用三唑酮类药剂防治。"
-            elif disease == "叶黄病":
-                suggestion += "苗期叶黄病需检查土壤养分，适当追施氮肥。"
-            else:
-                suggestion += "健康玉米苗，继续保持良好的田间管理。"
-        elif growth_stage == "拔节期":
-            if disease == "叶斑病":
-                suggestion += "拔节期叶斑病可喷洒代森锰锌等保护性杀菌剂。"
-            elif disease == "叶锈病":
-                suggestion += "拔节期叶锈病可喷洒三唑酮类药剂防治。"
-            elif disease == "叶黄病":
-                suggestion += "拔节期叶黄病需检查灌溉和养分状况，适当调整。"
-            else:
-                suggestion += "健康玉米，继续保持良好的田间管理。"
-        else:
-            suggestion += "建议根据实际生长期选择合适药剂，并注意田间管理。"
+        suggestion = f"检测到{disease}，{disease}详情信息：\n"
+        
+        if disease == "叶斑病":
+            suggestion += "症状：初期在叶片上出现水渍状褪绿小点，后扩展为圆形或椭圆形病斑，边缘红褐色，中央灰白色。\n"
+            suggestion += "病因：由玉米大斑病菌引起，属于真菌性病害。\n"
+            suggestion += "危害：影响光合作用，导致植株早衰，籽粒不饱满。\n"
+            suggestion += "防治建议：选用抗病品种，实行轮作，及时清除病残体，发病初期可喷洒代森锰锌、百菌清等杀菌剂。"
+        elif disease == "叶锈病":
+            suggestion += "症状：叶片上出现橙黄色或铁锈色粉状孢子堆，后期变为黑褐色。\n"
+            suggestion += "病因：由玉米锈菌引起，高温高湿有利于病害发生。\n"
+            suggestion += "危害：破坏叶片组织，影响光合作用，导致叶片早枯。\n"
+            suggestion += "防治建议：选用抗病品种，避免种植过密，保持田间通风透光，发病初期喷洒三唑酮等杀菌剂。"
+        elif disease == "叶黄病":
+            suggestion += "症状：叶片从边缘或叶尖开始发黄，叶脉仍保持绿色。\n"
+            suggestion += "病因：可能由缺素、病毒侵染或生理性因素引起。\n"
+            suggestion += "危害：影响植株正常生长发育，光合效率降低。\n"
+            suggestion += "防治建议：根据土壤情况补充相应元素肥料，防治传毒昆虫，加强田间管理。"
+        else:  # 健康玉米
+            suggestion += "症状：叶片浓绿，生长健壮，无明显病斑或异常。\n"
+            suggestion += "防治建议：保持良好的田间管理，适时适量施肥浇水。"
         
         suggestion += f"\n当前地点：{location}，时间：{time_info}"
         
@@ -149,6 +165,16 @@ def predict():
             "success": False,
             "error": f"处理图像时出错: {str(e)}"
         })
+
+@app.route('/', methods=['GET'])
+def index():
+    return jsonify({
+        "status": "running",
+        "message": "玉米叶片病害识别服务器正在运行",
+        "endpoints": {
+            "/predict": "POST - 上传图片进行病害识别"
+        }
+    })
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)

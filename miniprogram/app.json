@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/preview/preview",
     "pages/result/result",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/webview/webview"
   ],
   "window": {
     "backgroundTextStyle": "light",
