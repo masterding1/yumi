@@ -1,0 +1,7 @@
+<view class="container">
+  <image src="{{imgSrc}}" mode="aspectFit" class="preview-image"></image>
+  <view class="button-bar">
+    <button class="action-button secondary-button" bindtap="goBack">重新拍照</button>
+    <button class="action-button primary-button" bindtap="uploadImage">开始识别</button>
+  </view>
+</view>

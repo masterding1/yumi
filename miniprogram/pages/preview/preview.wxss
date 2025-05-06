@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* 使按钮栏在底部 */
+  height: 100vh;
+  background-color: #000000; /* 黑色背景 */
+  box-sizing: border-box;
+  padding-bottom: env(safe-area-inset-bottom); /* 适配iPhone X等底部安全区域 */
+}
+
+.preview-image {
+  width: 100%;
+  flex-grow: 1; /* 图片占据大部分空间 */
+  object-fit: contain; /* 保持图片比例 */
+}
+
+.button-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 30rpx 20rpx;
+  background-color: #1c1c1c; /* 暗色背景 */
+  box-sizing: border-box;
+}
+
+.action-button {
+  flex: 1;
+  margin: 0 15rpx;
+  padding: 20rpx 0;
+  font-size: 30rpx;
+  border-radius: 50rpx;
+  text-align: center;
+}
+
+.primary-button {
+  background-color: #07c160; /* 微信绿 */
+  color: white;
+}
+
+.secondary-button {
+  background-color: #FFA500; /* 橙色 */
+  color: white;
+}
